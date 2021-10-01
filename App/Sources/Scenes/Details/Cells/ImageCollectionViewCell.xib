@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ImageCollectionViewCell" customModule="Classifieds" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="225" height="189"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="225" height="189"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FPG-zQ-ShA">
+                        <rect key="frame" x="0.0" y="0.0" width="225" height="189"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOC-AN-bxK" customClass="PaddingLabel" customModule="Classifieds" customModuleProvider="target">
+                        <rect key="frame" x="15" y="153" width="42" height="21"/>
+                        <color key="backgroundColor" red="0.6705882353" green="0.6705882353" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <accessibility key="accessibilityConfiguration" identifier="imageIndicatorLabel"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                <real key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="tOl-bN-9Tc">
+                        <rect key="frame" x="102.5" y="84.5" width="20" height="20"/>
+                    </activityIndicatorView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="VOC-AN-bxK" secondAttribute="bottom" constant="15" id="0GB-mq-Cad"/>
+                <constraint firstItem="tOl-bN-9Tc" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="1l3-GV-G4A"/>
+                <constraint firstAttribute="trailing" secondItem="FPG-zQ-ShA" secondAttribute="trailing" id="3KX-0m-E8i"/>
+                <constraint firstItem="FPG-zQ-ShA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="JNU-tb-C43"/>
+                <constraint firstItem="FPG-zQ-ShA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="N9N-rI-NQE"/>
+                <constraint firstItem="VOC-AN-bxK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="ad6-Dr-som"/>
+                <constraint firstItem="tOl-bN-9Tc" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="cuz-1F-ZfB"/>
+                <constraint firstAttribute="bottom" secondItem="FPG-zQ-ShA" secondAttribute="bottom" id="n1T-Nz-O03"/>
+            </constraints>
+            <size key="customSize" width="225" height="189"/>
+            <connections>
+                <outlet property="activityIndicator" destination="tOl-bN-9Tc" id="UCB-Mh-VUn"/>
+                <outlet property="imageIndicatorLabel" destination="VOC-AN-bxK" id="dIl-9P-XHu"/>
+                <outlet property="imageView" destination="FPG-zQ-ShA" id="veT-sD-xaJ"/>
+            </connections>
+            <point key="canvasLocation" x="184.78260869565219" y="164.39732142857142"/>
+        </collectionViewCell>
+    </objects>
+</document>
